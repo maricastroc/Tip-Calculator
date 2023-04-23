@@ -1,0 +1,13 @@
+.custom {
+  text-align: center;
+}
+
+.custom input {
+  text-align: center;
+  font-size: 1.4rem;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--blue-100);
+  padding: 0.4rem;
+}

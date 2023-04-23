@@ -1,0 +1,20 @@
+.inputContainer {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blue-100);
+  border: transparent;
+  padding: 0.4rem 1.1rem;
+  border-radius: 12px;
+}
+
+.inputContainer input {
+  padding-right: 0.5rem;
+  width: 80%;
+  background-color: transparent;
+  border: transparent;
+  text-align: right;
+  font-size: 1.5rem;
+  color: var(--aqua-900);
+}

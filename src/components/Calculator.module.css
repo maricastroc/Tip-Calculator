@@ -1,0 +1,153 @@
+.calculator {
+  background-color: var(--white-100);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+.user_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.bill {
+  padding-top: 2rem;
+}
+
+strong {
+  color: var(--blue-400);
+}
+
+.select_tip_buttons {
+  margin-top: 1.375rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.results {
+  background-color: var(--aqua-900);
+  padding: 2.3rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 1.5rem 0 1.5rem;
+  border-radius: 12px;
+}
+
+.results {
+  background-color: var(--aqua-900);
+  padding: 2.3rem 1.5rem 1.5rem;
+  overflow: scroll;
+}
+
+.results_items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.results_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results_item h1 {
+  font-size: 2rem;
+  color: var(--aqua-500);
+  padding: 0 0 0 1.5rem;
+}
+
+.results_item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.results_item div strong {
+  color: var(--white-100);
+}
+
+.results_item div p {
+  color: var(--blue-600);
+  font-size: 0.815rem;
+}
+
+.results button {
+  padding: 0.7rem;
+  cursor: pointer;
+  color: var(--aqua-900);
+  background-color: var(--aqua-500);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+}
+
+@media(min-width: 480px) {
+  .calculator {
+    margin: 0 auto;
+    width: clamp(20rem, 90vw, 30rem);
+    border-radius: 2rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .calculator {
+    margin: 0 auto;
+    width: clamp(20rem, 90vw, 30rem);
+  }
+}
+
+@media(min-width: 1024px) {
+  .calculator {
+    box-shadow: 0.5rem 1rem 1rem hsla(183, 100%, 15%, 0.175);
+    padding: 2rem 2rem 2rem 2.5rem;
+    min-height: 0;
+    max-height: 30rem;
+    display: flex;
+    gap: 2.5rem;
+    width: 58rem;
+    padding-right: 0;
+    border-radius: 2rem;
+  }
+
+  .bill {
+    padding-top: 0;
+  }
+  
+
+  .user_inputs {
+    padding: 1rem 0;
+  }
+
+  .select_tip_buttons {
+    margin-top: 1.375rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .results {
+    margin-top: 0;
+    padding: 3.5rem 2.5rem 2.5rem;
+    width: 50%;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .results_items {
+    gap: 3rem;
+  }
+
+  .results_item {
+    align-items: center;
+  }
+
+  .results_item h1 {
+    font-size: 3rem;
+  }
+}
+
