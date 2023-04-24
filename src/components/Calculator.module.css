@@ -181,7 +181,7 @@ h1, h2 {
     align-items: center;
   }
 
-  .results_item h1 {
+  .results_item strong {
     font-size: 3rem;
   }
 }
