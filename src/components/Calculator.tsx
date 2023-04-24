@@ -143,14 +143,14 @@ export function Calculator() {
               <h3>Tip Amount</h3>
               <p>/ person</p>
             </div>
-            <h1>${tipAmount.toFixed(2)}</h1>
+            <strong>${tipAmount.toFixed(2)}</strong>
           </div>
           <div className={styles.results_item}>
             <div>
               <h3>Total</h3>
               <p>/ person</p>
             </div>
-            <h1>${totalForEach.toFixed(2)}</h1>
+            <strong>${totalForEach.toFixed(2)}</strong>
           </div>
         </div>
         <button
