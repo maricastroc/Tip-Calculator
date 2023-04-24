@@ -31,7 +31,7 @@ h1, h2 {
 
 .number_of_people_text {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .number_of_people_text h3 {
@@ -126,6 +126,12 @@ h1, h2 {
     margin: 0 auto;
     width: clamp(20rem, 90vw, 30rem);
     border-radius: 2rem;
+  }
+
+  .number_of_people_text {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
