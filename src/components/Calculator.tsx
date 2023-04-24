@@ -67,7 +67,7 @@ export function Calculator() {
   }, [tipPercentage, billValue, peopleNumber, tipAmount, totalForEach])
 
   return (
-    <main className={styles.calculator}>
+    <section className={styles.calculator}>
       <section className={styles.user_inputs}>
         <div className={styles.bill}>
           <h3>Bill</h3>
@@ -147,6 +147,6 @@ export function Calculator() {
         </div>
         <button onClick={resetCalculator}>RESET</button>
       </section>
-    </main>
+    </section>
   )
 }
