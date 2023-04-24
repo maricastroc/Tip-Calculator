@@ -29,6 +29,17 @@ h1, h2 {
   gap: 1rem;
 }
 
+.number_of_people_text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number_of_people_text h3 {
+  font-size: 0.9rem;
+  font-style: 900;
+  color: var(--orange-400);
+}
+
 .results {
   background-color: var(--aqua-900);
   padding: 2.3rem 1.5rem 1.5rem;

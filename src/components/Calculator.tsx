@@ -8,14 +8,16 @@ import { useEffect, useState } from 'react'
 export function Calculator() {
   const [enabledButton, setEnabledButton] = useState(true)
 
-  const [tipPercentage, setTipPercentage] = useState(0.15)
-  const [billValue, setBillValue] = useState<number | string>(142.55)
-  const [peopleNumber, setPeopleNumber] = useState<number | string>(5)
+  const [tipPercentage, setTipPercentage] = useState(0)
+  const [billValue, setBillValue] = useState<number | string>(0)
+  const [peopleNumber, setPeopleNumber] = useState<number | string>(0)
 
   const [tipAmount, setTipAmount] = useState(0.0)
   const [totalForEach, setTotalForEach] = useState(0.0)
 
-  const [resetButtonLocked, setResetButtonLocked] = useState(false)
+  const [invalidPeopleNumber, setInvalidPeopleNumber] = useState(false)
+
+  const [resetButtonLocked, setResetButtonLocked] = useState(true)
 
   function changeCustomValue(value: number) {
     if (!isNaN(value)) {
@@ -41,6 +43,10 @@ export function Calculator() {
   function changePeopleNumber(value: number | string) {
     setResetButtonLocked(false)
     setPeopleNumber(value)
+  }
+
+  function handleInvalidPeopleNumber(value: boolean) {
+    setInvalidPeopleNumber(value)
   }
 
   function resetCalculator() {
@@ -86,6 +92,7 @@ export function Calculator() {
             placeholder="0.00"
             value={billValue}
             onChange={changeBillValue}
+            onInvalid={handleInvalidPeopleNumber}
           />
         </div>
         <div className={styles.select_tip}>
@@ -125,7 +132,10 @@ export function Calculator() {
           </div>
         </div>
         <div className={styles.number_of_people}>
-          <h2>Number of People</h2>
+          <div className={styles.number_of_people_text}>
+            <h2>Number of People</h2>
+            {invalidPeopleNumber && <h3>Can&apos;t be zero!</h3>}
+          </div>
           <Input
             type="number"
             input_id="people"
@@ -133,6 +143,7 @@ export function Calculator() {
             placeholder="0"
             value={peopleNumber}
             onChange={changePeopleNumber}
+            onInvalid={handleInvalidPeopleNumber}
           />
         </div>
       </div>
