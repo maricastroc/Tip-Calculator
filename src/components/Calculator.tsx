@@ -15,14 +15,18 @@ export function Calculator() {
   const [tipAmount, setTipAmount] = useState(0.0)
   const [totalForEach, setTotalForEach] = useState(0.0)
 
+  const [resetButtonLocked, setResetButtonLocked] = useState(false)
+
   function changeCustomValue(value: number) {
     if (!isNaN(value)) {
       setTipPercentage(value / 100)
       setEnabledButton(false)
+      setResetButtonLocked(false)
     }
   }
 
   function changeTipPercentage(value: number) {
+    setResetButtonLocked(false)
     ;(document.querySelector('.custom-amount') as HTMLInputElement).value = ''
 
     setEnabledButton(true)
@@ -30,10 +34,12 @@ export function Calculator() {
   }
 
   function changeBillValue(value: number | string) {
+    setResetButtonLocked(false)
     setBillValue(value)
   }
 
   function changePeopleNumber(value: number | string) {
+    setResetButtonLocked(false)
     setPeopleNumber(value)
   }
 
@@ -44,6 +50,8 @@ export function Calculator() {
     setTipAmount(0)
     setTotalForEach(0)
     ;(document.querySelector('.custom-amount') as HTMLInputElement).value = ''
+    setEnabledButton(false)
+    setResetButtonLocked(true)
   }
 
   useEffect(() => {
@@ -145,7 +153,17 @@ export function Calculator() {
             <h1>${totalForEach.toFixed(2)}</h1>
           </div>
         </div>
-        <button onClick={resetCalculator}>RESET</button>
+        <button
+          onClick={resetCalculator}
+          disabled={resetButtonLocked}
+          className={
+            resetButtonLocked
+              ? styles.reset_btn_locked
+              : styles.reset_btn_unlocked
+          }
+        >
+          RESET
+        </button>
       </section>
     </section>
   )

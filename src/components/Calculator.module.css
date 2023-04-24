@@ -78,14 +78,36 @@ h1, h2 {
   font-size: 0.815rem;
 }
 
-.results button {
+.results .reset_btn_locked, .reset_btn_unlocked {
   padding: 0.7rem;
   cursor: pointer;
-  color: var(--aqua-900);
-  background-color: var(--aqua-500);
   border: none;
   border-radius: 8px;
   font-size: 1.25rem;
+}
+
+.reset_btn_unlocked {
+  cursor: pointer;
+  color: var(--aqua-900);
+  background-color: var(--aqua-500);
+  transition: 300ms;
+}
+
+.reset_btn_unlocked:hover {
+  background-color: var(--aqua-300);
+}
+
+.reset_btn_locked {
+  color: var(--aqua-900);
+  background-color: var(--aqua-800);
+}
+
+.reset_btn_locked:focus {
+  box-shadow: none;
+}
+
+.reset_btn_locked:disabled {
+  cursor:not-allowed
 }
 
 @media(min-width: 480px) {
