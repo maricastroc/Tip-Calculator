@@ -17,8 +17,9 @@
   padding-top: 2rem;
 }
 
-strong {
+h3 {
   color: var(--blue-400);
+  font-size: 1rem;
 }
 
 .select_tip_buttons {
@@ -67,7 +68,8 @@ strong {
   align-items: flex-start;
 }
 
-.results_item div strong {
+.results_item div h5 {
+  font-size: 1rem;
   color: var(--white-100);
 }
 

@@ -70,7 +70,7 @@ export function Calculator() {
     <main className={styles.calculator}>
       <section className={styles.user_inputs}>
         <div className={styles.bill}>
-          <strong>Bill</strong>
+          <h3>Bill</h3>
           <Input
             type="number"
             input_id="bill"
@@ -81,7 +81,7 @@ export function Calculator() {
           />
         </div>
         <div className={styles.select_tip}>
-          <strong>Select Tip %</strong>
+          <h3>Select Tip %</h3>
           <div className={styles.select_tip_buttons}>
             <Button
               btnID="btn-5"
@@ -117,7 +117,7 @@ export function Calculator() {
           </div>
         </div>
         <div className={styles.number_of_people}>
-          <strong>Number of People</strong>
+          <h3>Number of People</h3>
           <Input
             type="number"
             input_id="people"
@@ -132,14 +132,14 @@ export function Calculator() {
         <div className={styles.results_items}>
           <div className={styles.results_item}>
             <div>
-              <strong>Tip Amount</strong>
+              <h5>Tip Amount</h5>
               <p>/ person</p>
             </div>
             <h1>${tipAmount.toFixed(2)}</h1>
           </div>
           <div className={styles.results_item}>
             <div>
-              <strong>Total</strong>
+              <h5>Total</h5>
               <p>/ person</p>
             </div>
             <h1>${totalForEach.toFixed(2)}</h1>
