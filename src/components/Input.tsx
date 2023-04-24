@@ -20,7 +20,7 @@ export function Input(props: InputProps) {
   }
 
   return (
-    <section className={styles.inputContainer}>
+    <div className={styles.inputContainer}>
       <img src={props.icon_src} alt="" />
       <input
         type={props.type}
@@ -30,6 +30,6 @@ export function Input(props: InputProps) {
         onChange={handleChangeInputValue}
         required
       />
-    </section>
+    </div>
   )
 }
