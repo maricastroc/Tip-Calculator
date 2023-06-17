@@ -31,7 +31,7 @@ This was an excellent exercise to practice using componentization as much as pos
 > Clone the repository:
 
 ```bash
-git clone https://github.com/maricastroc/github-blog
+git clone https://github.com/maricastroc/tip-calculator
 ```
 
 > Install the dependencies:
